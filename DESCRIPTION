@@ -1,0 +1,17 @@
+Package: ForGM
+Type: Package
+Title: Modelos de crecimiento forestal
+Version: 0.1.0
+Autor@R:
+    person("Abel Joseph", "Hernández-Martínez", role = c("aut", "cre"),
+    comment = c(ORCID = "0000-0002-4489-8997"))
+Description: El paquete es una compilación de modelos de crecimiento con
+    funciones básicas y otros modelos construidos bajo el enfoque de Diferencia
+    Algebraica (ADA, por sus siglas en inglés) y Diferencia Algebraica
+    Generalizada (GADA, por sus siglas en inglés). Son utilizados apliamente
+    a las ciencias forestales principalmente a variables como el diámetro
+    normal, altura, área basal, entre otras.
+License: GLP-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.0
