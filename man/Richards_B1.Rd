@@ -4,20 +4,20 @@
 \alias{Richards_B1}
 \title{Modelo polimórfico \eqn{\beta_1} de Chapman-Richards (1959)}
 \usage{
-Richards_B1(B0, B2, YO, E0, E1)
+Richards_B1(B0, B2, Y0, E0, E1)
 }
 \arguments{
 \item{B0}{Valor numérico o parámetro \eqn{\beta_0}.}
 
 \item{B2}{Valor numérico o parámetro \eqn{\beta_2}.}
 
+\item{Y0}{Valor del crecimiento inicial.}
+
 \item{E0}{Valor numérico o vector de observaciones de la edad inicial
 de los árboles.}
 
 \item{E1}{Valor numérico o vector de observaciones de la edad futura
 de los árboles.}
-
-\item{Y0}{Valor del crecimiento inicial.}
 }
 \value{
 Devuelve el valor del crecimiento estimado del árbol.

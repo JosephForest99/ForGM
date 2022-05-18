@@ -26,6 +26,6 @@
 #'
 #' @export Richards_B1
 
-Richards_B1 <- function(B0,B2,YO,E0,E1){
+Richards_B1 <- function(B0,B2,Y0,E0,E1){
   B0*(1-(1-(Y0/B0)^(1/B2))^(E1/E0))^B2
 }
