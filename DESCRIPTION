@@ -15,3 +15,5 @@ License: GLP-3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.0
+URL: https://github.com/JosephForest99/ForGM
+BugReports: https://github.com/JosephForest99/ForGM/issues
