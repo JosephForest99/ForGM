@@ -1,8 +1,8 @@
 #' Modelo polimórfico \eqn{\beta_2} de Chapman-Richards (1959)
 #'
 #' La función es el resultado de la aplicación del enfoque de Diferencia
-#' Algebraica (ADA, por sus siglas en inglés) con el parámetro de la
-#' tasa de cambio.
+#' Algebraica (ADA, por sus siglas en inglés). El parámetro de la
+#' tasa de cambio (\eqn{\beta_2}) se relacionó con el sitio.
 #'
 #' @details El modelo ADA con valor específico del sitio \eqn{\beta_2} es:
 #'     \deqn{y_1 = \beta_0 \times \left( \frac{Y_0}{\beta_0} \right)^ { \left( \frac{log(1-exp(-\beta_1 \times E_1))}{log(1-exp(-\beta_1 \times E_0))} \right)}}

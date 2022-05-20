@@ -24,8 +24,8 @@ Devuelve el valor del crecimiento estimado del árbol.
 }
 \description{
 La función es el resultado de la aplicación del enfoque de Diferencia
-Algebraica (ADA, por sus siglas en inglés) con el parámetro de la
-tasa de cambio.
+Algebraica (ADA, por sus siglas en inglés). El parámetro de la
+tasa de cambio (\eqn{\beta_2}) se relacionó con el sitio.
 }
 \details{
 El modelo ADA con valor específico del sitio \eqn{\beta_2} es:

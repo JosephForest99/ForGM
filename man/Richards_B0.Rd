@@ -24,7 +24,8 @@ Devuelve el valor del crecimiento estimado del árbol.
 }
 \description{
 La función es el resultado de la aplicación del enfoque de Diferencia
-Algebraica (ADA, por sus siglas en inglés) con el parámetro de la asíntota que se relaciona con el sitio.
+Algebraica (ADA, por sus siglas en inglés). El parámetro de la asíntota (\eqn{\beta_0})
+se relacionó con el sitio.
 }
 \details{
 El modelo ADA con valor específico del sitio \eqn{\beta_0} es:
