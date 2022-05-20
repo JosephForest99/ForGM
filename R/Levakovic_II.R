@@ -25,6 +25,6 @@
 #'
 #' @export Levakovic_II
 
-Levakovic_II <- function(B0,B1,B2,Y,E){
+Levakovic_II <- function(B0,B1,B2,E){
   B0*(E/(B1+E))^B2
 }

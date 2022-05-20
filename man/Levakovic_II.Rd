@@ -4,7 +4,7 @@
 \alias{Levakovic_II}
 \title{Modelo base de Levakovic II (1935)}
 \usage{
-Levakovic_II(B0, B1, B2, Y, E)
+Levakovic_II(B0, B1, B2, E)
 }
 \arguments{
 \item{B0}{Valor numérico o parámetro \eqn{\beta_0} que corresponde a
