@@ -1,18 +1,17 @@
-#' Modelo polimórfico complejo (GADA 1) de Korf (1939)
+#' Modelo polimórfico complejo (GADA 2) de Korf (1939)
 #'
 #' La función es el resultado de la aplicación del enfoque de Diferencia
 #' Algebraica Generalizada (GADA, por sus siglas en inglés). La ecuación original se reparametrizó:
 #' \deqn{y = \alpha_0 \times exp \left( -\alpha_1 \times E^{-\alpha_2} \right) } donde:
 #' \deqn{\alpha_0 = exp(\chi)}
-#' \deqn{\alpha_1 = \beta_1 + \frac{1}{\chi}}
+#' \deqn{\alpha_1 = \beta_0 + \frac{\beta_1}{\chi}}
 #' \deqn{\alpha_2 = \beta_2}
 #'
 #' @details El modelo GADA:
-#'     \deqn{Y_1 = exp(\chi_0) \times exp \left( \frac{-1}{E_1^{\beta_2}} \right)^{\left( \beta_1 + \frac{1}{\chi_0} \right)}}
+#'     \deqn{Y_1 = exp(\chi_0) \times exp \left( \left(-\beta_0 + \frac{\beta_1}{\chi_0} \right) \times E_1^{-\beta_2} \right)}
 #'     donde:
-#'     \deqn{\chi_0 = 0.5 \times (-L_0 + R_0)}
-#'     \deqn{R_0 = \sqrt{L_0^2 - 4 \times log \left( exp \left( \frac{-1}{E_0^{\beta_2}} \right) \right) }}
-#'     \deqn{L_0 =  \beta_1 \times \left( \frac{-1}{E_0^{\beta_2}} \right) - log(Y_0)}
+#'     \deqn{\chi_0 = 0.5 \times \beta_0 \times E_0^{-\beta_2} + log(Y_0) + R_0}
+#'     \deqn{R_0 = \sqrt{\left(\beta_0 \times E_0^{-\beta_2} + log(Y_0) \right)^{2} + 4 \times \beta_1 \times E_0^{-\beta_2}}}
 #'
 #' @author Abel Joseph Hernández-Martínez
 #'
@@ -32,12 +31,11 @@
 #'
 #' @seealso \code{\link{Korf}}
 #'
-#' @export Korf_G1
+#' @export Korf_G2
 
-Korf_G1 <- function(B0,B1,B2,B3,Y0,E0,E1){
-  L0 = B1*(-1/E0^B2)-log(Y0)
-  R0 = sqrt(L0^2-4*log(exp(-1/E0^B2)));
-  X0 = 0.5*(-L0+R0);
+Korf_G2 <- function(B0,B1,B2,Y0,E0,E1){
+  R0 = sqrt((B0*E0^-B2+log(Y0))^2+4*B1*E0^-B2);
+  X0 = 0.5*B0*E0^-B2+log(Y0)+R0;
 
-  exp(X0)*exp(-1/E1^B2)^(B1+1/X0);
+  exp(X0)*exp((-B0+B1/X0)*E1^-B2);
 }
