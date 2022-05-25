@@ -29,7 +29,7 @@ estimación del crecimiento a un vector de datos que corresponden a la
 edad de los árboles con parámetros conocidos.
 }
 \details{
-La expresión matemática del modelo base de Chapman-Richards (1959) es:
+La expresión matemática del modelo base de Chapman-Richards (1959):
 \deqn{y = \beta_0 \times (1-exp(-\beta_1 \times E))^{\beta_2}}
 }
 \references{

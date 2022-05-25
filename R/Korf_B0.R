@@ -1,11 +1,11 @@
-#' Modelo anamórfico \eqn{\beta_0} de Chapman-Richards (1959)
+#' Modelo anamórfico \eqn{\beta_0} de Korf (1939)
 #'
 #' La función es el resultado de la aplicación del enfoque de Diferencia
 #' Algebraica (ADA, por sus siglas en inglés). El parámetro de la asíntota (\eqn{\beta_0})
 #' se relacionó con el sitio.
 #'
 #' @details El modelo ADA con valor específico del sitio \eqn{\beta_0}:
-#'     \deqn{Y_1 = y_0 \times \left[ \frac{1-exp(-\beta_1 \times E_1)}{1-exp(-\beta_1 \times E_0)} \right]^{\beta_2}}
+#'     \deqn{Y_1 = Y_0 \times \left( \frac{exp \left(-\beta_1 \times E_1^{-\beta_2} \right)}{exp \left(-\beta_1 \times E_0^{-\beta_2} \right)} \right)}
 #'
 #' @author Abel Joseph Hernández-Martínez
 #'
@@ -19,14 +19,10 @@
 #'
 #' @return Devuelve el valor del crecimiento estimado del árbol.
 #'
-#' @references Hernández-Cuevas et al. (2018). Modelos de crecimiento en altura
-#' dominante e índices de sitio para \emph{Pinus ayacahuite} Ehren.
-#' Agrociencia 52:437-453.
+#' @seealso \code{\link{Korf}}
 #'
-#' @seealso \code{\link{Richards}}
-#'
-#' @export Richards_B0
+#' @export Korf_B0
 
-Richards_B0 <- function(B1,B2,Y0,E0,E1){
-  Y0*((1-exp(-B1*E1))/(1-exp(-B1*E0)))^B2
+Korf_B0 <- function(B1,B2,Y0,E0,E1){
+  Y0*(exp(-B1*E1^-B2)/exp(-B1*E0^-B2))
 }

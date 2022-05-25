@@ -6,7 +6,7 @@
 #' estimación del crecimiento a un vector de datos que corresponden a la
 #' edad de los árboles con parámetros conocidos.
 #'
-#' @details La expresión matemática del modelo base de Chapman-Richards (1959) es:
+#' @details La expresión matemática del modelo base de Chapman-Richards (1959):
 #' \deqn{y = \beta_0 \times (1-exp(-\beta_1 \times E))^{\beta_2}}
 #'
 #' @author Abel Joseph Hernández-Martínez
@@ -20,6 +20,7 @@
 #' @param E Valor numérico o vector de observaciones de la edad de los árboles.
 #'
 #' @return Devuelve el valor del crecimiento estimado del árbol.
+#'
 #' @references Quiñonez-Barraza et al. (2015). Índice de sitio con polimorfimo
 #'     complejo para masas forestales de Durango, México. Agrociencia 49:439-454.
 #'
