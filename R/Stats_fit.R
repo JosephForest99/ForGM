@@ -8,10 +8,10 @@
 #'
 #' @seealso \code{\link{nls}}
 #'
-#' @export Stats_fit_nls
+#' @export Stats_fit
 #'
 
-Stats_fit_nls <- function(fit, data) {
+Stats_fit <- function(fit, data) {
 
   # Valores para obtener estad?sticos
   SCE = sum(resid(fit)^2) # Suma de cuadrados del error
@@ -49,5 +49,5 @@ Stats_fit_nls <- function(fit, data) {
                              AIC= round(AIC,3),
                              Sesgo=round(Sesgo,3),
                              DW = round(DW,3))
-  return(Stats_fit)
+  return(Estadisticos)
 }
