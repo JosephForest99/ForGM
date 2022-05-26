@@ -16,7 +16,6 @@
 #'
 #' @author Abel Joseph Hernández-Martínez
 #'
-#' @param B0 Valor numérico o parámetro \eqn{\beta_0}.
 #' @param B1 Valor numérico o parámetro \eqn{\beta_1}.
 #' @param B2 Valor numérico o parámetro \eqn{\beta_2}.
 #' @param Y0 Valor del crecimiento inicial.
@@ -34,7 +33,7 @@
 #'
 #' @export Richards_G2
 
-Richards_G2 <- function(B0,B1,B2,Y0,E0,E1){
+Richards_G2 <- function(B1,B2,Y0,E0,E1){
   L0 = log(1-exp(-B1*E0))
   R0 = sqrt(log(Y0)^2-4*B2*L0)
   X0 = 0.5*(log(Y0)+R0)

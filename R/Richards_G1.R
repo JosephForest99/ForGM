@@ -8,7 +8,7 @@
 #'     \deqn{\alpha_2 = \beta_1 + \frac{\beta_2}{\chi}}
 #'
 #' @details El modelo GADA:
-#'     \deqn{Y_1 = Y_0 \times \left( \frac{1 + exp(-\beta_1\times E_1)}{1 + exp(-\beta_1\times E_0)} \right)^{\left( \beta_1 + \frac{\beta_2}{\chi} \right)}}
+#'     \deqn{Y_1 = Y_0 \times \left( \frac{1 + exp(-\beta_0\times E_1)}{1 + exp(-\beta_0\times E_0)} \right)^{\left( \beta_1 + \frac{\beta_2}{\chi} \right)}}
 #'     donde:
 #'     \deqn{\chi_0 = 0.5 \times (log(Y_0) -\beta_1 \times L_0 + R_0)}
 #'     \deqn{R_0 = \sqrt{(log(Y_0) - \beta_1 \times L_0)^{2} - 4 \times \beta_2 \times L_0 }}
@@ -37,7 +37,7 @@
 Richards_G1 <- function(B0,B1,B2,Y0,E0,E1){
   L0 = log(1-exp(-B0*E0))
   R0 = sqrt((log(Y0)-B1*L0)^2-4*B2*L0)
-  X0 = 0.5*(log(Y0)-B1*L0+R0)
+  X0 = 0.5*((log(Y0)-B1*L0)+R0)
 
   Y0*((1-exp(-B0*E1))/(1-exp(-B0*E0)))^(B1+B2/X0)
 }

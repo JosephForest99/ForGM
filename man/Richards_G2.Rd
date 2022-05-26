@@ -4,11 +4,9 @@
 \alias{Richards_G2}
 \title{Modelo polimórfico complejo (GADA 2) de Chapman-Richards (1935)}
 \usage{
-Richards_G2(B0, B1, B2, Y0, E0, E1)
+Richards_G2(B1, B2, Y0, E0, E1)
 }
 \arguments{
-\item{B0}{Valor numérico o parámetro \eqn{\beta_0}.}
-
 \item{B1}{Valor numérico o parámetro \eqn{\beta_1}.}
 
 \item{B2}{Valor numérico o parámetro \eqn{\beta_2}.}
