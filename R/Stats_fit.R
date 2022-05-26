@@ -29,7 +29,7 @@ Stats_fit <- function(fit, data) {
   R2 = 1-(SCE/SCM)                           # Coeficiente de determinación
   R2adj = 1-(SCE/SCM)*((n-1)/(n-p))          # Coeficiente de determinación ajustada
   ADJRSQ = 1-((n-1)*(1-R2))/(n-p)            # Fórmula de SAS
-  CV <- (SD/mean(y))*100                     # Coeficiente de variación
+  CV <- (SD/mean(data))*100                  # Coeficiente de variación
   loglik = logLik(fit)                       # Con la función de R
   AIC = n*log(SCE/n)+2*p                     # Criterio de información de Akaike (AIC)
   AIC2 = AIC(fit)                            # AIC con la función de R
