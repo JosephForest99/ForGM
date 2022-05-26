@@ -52,6 +52,6 @@ Stats_fit <- function(fit, data) {
                              Sesgo=round(Sesgo,4),
                              DW = round(DW,4),
                              CV = round(CV,4),
-                             S = rpund(S,4))
+                             S = round(S,4))
   return(Estadisticos)
 }
