@@ -16,7 +16,6 @@
 #'
 #' @author Abel Joseph Hernández-Martínez
 #'
-#' @param B0 Valor numérico o parámetro \eqn{\beta_0}.
 #' @param B1 Valor numérico o parámetro \eqn{\beta_1}.
 #' @param B2 Valor numérico o parámetro \eqn{\beta_2}.
 #' @param Y0 Valor del crecimiento inicial.
@@ -34,7 +33,7 @@
 #'
 #' @export Korf_G1
 
-Korf_G1 <- function(B0,B1,B2,B3,Y0,E0,E1){
+Korf_G1 <- function(B1,B2,Y0,E0,E1){
   L0 = B1*(-1/E0^B2)-log(Y0)
   R0 = sqrt(L0^2-4*log(exp(-1/E0^B2)));
   X0 = 0.5*(-L0+R0);

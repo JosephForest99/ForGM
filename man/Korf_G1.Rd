@@ -4,11 +4,9 @@
 \alias{Korf_G1}
 \title{Modelo polimórfico complejo (GADA 1) de Korf (1939)}
 \usage{
-Korf_G1(B0, B1, B2, B3, Y0, E0, E1)
+Korf_G1(B1, B2, Y0, E0, E1)
 }
 \arguments{
-\item{B0}{Valor numérico o parámetro \eqn{\beta_0}.}
-
 \item{B1}{Valor numérico o parámetro \eqn{\beta_1}.}
 
 \item{B2}{Valor numérico o parámetro \eqn{\beta_2}.}
