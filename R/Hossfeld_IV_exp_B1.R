@@ -28,5 +28,5 @@
 #' @export Hossfeld_IV_exp_B1
 
 Hossfeld_IV_exp_B1 <- function(B0,B2,Y0,E0,E1){
-  B0/(1+exp(log(((B0-Y0)/E0)/exp(-B2*log(E0))))*exp(-B2*log(E1)))
+  B0/(1+exp(log(((B0-Y0)/Y0)/exp(-B2*log(E0))))*exp(-B2*log(E1)))
 }
