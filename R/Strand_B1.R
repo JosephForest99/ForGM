@@ -21,7 +21,7 @@
 #'
 #' @seealso \code{\link{Strand}}
 #'
-#' @export Strand_B0
+#' @export Strand_B1
 
 Strand_B1 <- function(B0,B2,Y0,E0,E1){
   (E1/(B0+( (E0*Y0^(-1/B2)-B0)/E0 )*E1))^B2
